@@ -52,4 +52,9 @@ export class SmoothieService {
 
     return this.http.get<Smoothie[]>(smoothieListUrl);
   }
+  getOneSmoothie(id: String): Observable<Smoothie> {
+    const getUrl = `${this.apiUrl}/catalogue/${id}`;
+    console.log(getUrl);
+    return this.http.get<Smoothie>(getUrl);
+  }
 }

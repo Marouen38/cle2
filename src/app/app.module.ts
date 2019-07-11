@@ -14,6 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { SmoothieService } from './smoothie.service';
 import { SmoothieComponent } from './smoothie/smoothie.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './detail/detail.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     AppHeaderComponent,
     SmoothieComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    MatCardModule,
     
   ],
   providers: [SmoothieService],

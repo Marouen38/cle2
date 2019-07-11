@@ -1,4 +1,4 @@
-<p *ngFor="let smoothie of smoothies">
+<mat-card *ngFor="let smoothie of smoothies">
 {{smoothie.title}}
-
-</p>
+<button mat-button  [routerLink]="['/detail/', smoothie._id]">Go detail</button>
+</mat-card>
