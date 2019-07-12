@@ -5,7 +5,7 @@ import {MatInputModule} from '@angular/material/input';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, FormGroup} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -18,6 +18,12 @@ import { DetailComponent } from './detail/detail.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatListModule} from '@angular/material/list';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
+
 
 
 @NgModule({
@@ -27,10 +33,12 @@ import {MatListModule} from '@angular/material/list';
     AppHeaderComponent,
     SmoothieComponent,
     DetailComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
@@ -41,7 +49,8 @@ import {MatListModule} from '@angular/material/list';
     MatCardModule,
     MatTabsModule,
     MatListModule,
-    
+    ReactiveFormsModule,
+    MatFormFieldModule,
   ],
   providers: [SmoothieService],
   bootstrap: [AppComponent]
