@@ -1,1 +1,32 @@
 <p>detail works!</p>
+
+<ng-template #detail>
+        <mat-tab-group mat-align-tabs="center">
+          <mat-tab label="ingredients">
+            <mat-list>
+              <mat-list-item *ngFor="let ingredient of smoothie.ingredients">
+                <p matLine>
+                  <span> {{ingredient.nom}} </span>
+                  <span> {{ingredient.quantite}} </span>
+                </p>
+              </mat-list-item>
+            </mat-list>
+          </mat-tab>
+          <mat-tab label="Etapes">
+            <mat-list>
+              <mat-list-item *ngFor="let step of smoothie.steps, let i = index" class="step">
+                <p matLine>
+                  <span> {{ i + 1 }} :  </span>
+                  <span> {{ step.stepText}} </span>
+                </p>
+              </mat-list-item>
+            </mat-list>
+      ​
+          </mat-tab>
+          <mat-tab label="Photos">
+            boucles photos
+          </mat-tab>
+        </mat-tab-group>
+      </ng-template>
+      ​
+      <ng-container *ngTemplateOutlet="smoothie ? detail : '' "></ng-container>

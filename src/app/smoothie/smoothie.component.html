@@ -1,4 +1,5 @@
 <mat-card *ngFor="let smoothie of smoothies">
 {{smoothie.title}}
 <button mat-button  [routerLink]="['/detail/', smoothie._id]">Go detail</button>
+<!-- <button mat-button  (click)="goDetail(smoothie._id)"> Go detail </button> -->
 </mat-card>

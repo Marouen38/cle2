@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SmoothieService, Smoothie } from '../smoothie.service';
 import { Router } from '@angular/router';
+import { Smoothie, SmoothieService } from '../smoothie.service';
 
 @Component({
   selector: 'app-smoothie',
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class SmoothieComponent implements OnInit {
 
   private _smoothies :Smoothie[];
+  private _smoothieId :string;
 
   constructor(
     private smoothieService : SmoothieService,
@@ -20,23 +21,40 @@ export class SmoothieComponent implements OnInit {
 
   ngOnInit() {
     this.getAllSmoothies();
+    
   }
 
-  set smoothies(mSmoothies: any) {
+  set smoothie(mSmoothies: any) {
     this._smoothies = mSmoothies;
   }
+
 
   get smoothies(): any {
     return this._smoothies;
   }
 
+
+  get smoothiesId(): any {
+    return this._smoothieId;
+  }
+
+  set smoothiesId(mSmoothiesId: any) {
+    this._smoothieId = mSmoothiesId;
+  }
+
   getAllSmoothies(): void {
     this.smoothieService.getSmoothies()
     .subscribe((listSmoothie) => {
-        this.smoothies = listSmoothie;
-        console.log(this.smoothies);
+        this.smoothie = listSmoothie;
+        console.log(this.smoothie);
       });
   }
-  
+//   goDetail(smoothieId:string):void{
+// this.smoothieService.getOneSmoothie(this.smoothiesId).subscribe((smootthieDetail)=>{
+//   this.smoothie=smootthieDetail;
+//   console.log(this.smoothie);
+//   });
+
+  //}
 
 }

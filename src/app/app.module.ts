@@ -16,6 +16,9 @@ import { SmoothieComponent } from './smoothie/smoothie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './detail/detail.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatListModule} from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatTabsModule,
+    MatListModule,
     
   ],
   providers: [SmoothieService],
