@@ -58,7 +58,7 @@ export class SmoothieService {
     return this.http.get<Smoothie>(getUrl);
   }
   addSmoothie(smoothie: Smoothie) {
-    const addUrl = `${this.apiUrl}/catalog/add`;
+    const addUrl = `${this.apiUrl}/catalogue/add`;
     return this.http.post<Smoothie>(addUrl, smoothie);
   }
 

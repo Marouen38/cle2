@@ -22,9 +22,8 @@ import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-
-
-
+//import {MatAutocomplete, MatAutocompleteSelectedEvent, MatChipInputEvent, MatChipList} from '@angular/material';
+//import {COMMA, ENTER} from '@angular/cdk/keycodes';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
@@ -51,6 +49,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatListModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    // MatAutocomplete, 
+    // MatAutocompleteSelectedEvent, 
+    // MatChipList, 
   ],
   providers: [SmoothieService],
   bootstrap: [AppComponent]

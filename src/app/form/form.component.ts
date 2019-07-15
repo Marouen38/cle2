@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import { SmoothieService, Smoothie } from '../smoothie.service';
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-form',
@@ -37,15 +38,10 @@ export class FormComponent implements OnInit {
       }
       ]
     };
-  Réduire
-  
-  
-  
-  
-  
-  
-
+   
   smoothieForm : FormGroup;
+  separatorKeysCodes: number[] = [ENTER, COMMA];
+  public selectedIngredients = [];
   constructor(
     private fb : FormBuilder,
     private smoothieService:SmoothieService
@@ -91,6 +87,7 @@ export class FormComponent implements OnInit {
           console.log('smoothie inséré', lastInsertSmoothie);
         });
     }
+    
     
   }
    
